@@ -269,6 +269,7 @@ def terraform(
                 ),
                 fg="red",
             )
+            raise SystemExit(1)
         else:
             click.secho(
                 "terraform {} complete for {}".format(plan_for, name), fg="green"

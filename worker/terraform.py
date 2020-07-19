@@ -163,7 +163,6 @@ def make_vars(section, single, base=None):
 
     item_vars = copy.deepcopy(base.get(section, {}))
     for k, v in single.get(section, {}).items():
-        print("processing key: {}, value: {}")
         # terraform expects variables in a specific type, so need to convert bools to a lower case true/false
         matched_type = False
         if v is True:
